@@ -1,0 +1,163 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Covergirl Olympics</title>
+  <meta name="description" content="Covergirl Olympics">  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- put favicon.ico later -->
+
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <!--  jqModal Styling -->
+  <link type="text/css" rel="stylesheet" media="all" href="../css/jqModal.css" />
+  
+  <script src="../js/libs/modernizr-2.5.3.min.js"></script>
+  
+  <script type="text/javascript" src="../js/libs/swfobject.js"></script>
+  <script type="text/javascript">
+	swfobject.registerObject("Flash", "9.0.0", "../swf/expressInstall.swf");
+  </script>
+  <style>
+	body {background: #fff}
+	.clear {clear: both; font-size: 1px; height: 1px; overflow: hidden}
+	#wrapper, #container {width: 1102px}
+	#content {
+		background: transparent url(../img/layout/cg_cover.jpg) no-repeat 0 0;
+		position: relative; height: 743px; width: 1102px;
+		z-index: 1;
+		}
+	#Flash {
+		visibility: hidden; 
+		position: absolute; top: 0; left: 0;
+		}
+	.olympics_callout {
+		bottom: 154px; position: absolute; right: 111px;				
+		}
+		.olympics_callout a {			
+			display: block; text-indent: -9999px; background: transparent url(../img/layout/olympics-tout.jpg) no-repeat 0 0;
+			width: 315px; height: 97px;
+			}	
+#dialog {
+	width: 418px; height: 643px;	
+	background: none; border: none;
+	}
+	#dialog .video {		
+		width: 397px; height: 643px; text-indent: -9999px;
+		background: transparent url(../img/layout/overlay_dummy.png) no-repeat 0 0;
+		float: left;
+	}	
+	#dialog .jqmClose {
+		display: block; text-indent: -9999px;
+		width: 21px; height: 21px;
+		background: transparent url(../img/layout/close.png) no-repeat 0 0;
+		float: right;
+		}		
+  </style>
+</head>
+
+<body>
+
+<div id="wrapper" class="test-home">
+	<div id="container">
+		<div id="content">
+			<div class="olympics_callout"><a href="#" class="jqModal">view</a></div>
+			
+			<div id="Flash">
+			  
+			  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1102" height="743" id="myFlashContent">
+				<param name="movie" value="../swf/Olympics_splash.swf" />
+				<param name="flashvars" value="clickTAG=http://www.covergirl.com" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="../swf/Olympics_splash.swf" width="1102" height="743">
+					<param name="flashvars" value="clickTAG=http://www.covergirl.com" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflashplayer">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+			
+			</div>
+		</div>
+	</div><!-- end container -->
+</div><!-- end wrapper -->  
+
+<div class="jqmWindow" id="dialog">
+	<div class="video">video</div>
+	<a href="#" class="jqmClose">Close</a>
+	<div class="clear"></div>
+</div>
+  
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via ant build script-->    
+  <script type='text/javascript' src="../js/libs/jquery.cookie.js"></script>
+  <script type="text/javascript" src="../js/libs/jqModal.js"></script>
+  
+  <script type="text/javascript">		
+		/*var flashvars = {
+			clickTAG: "http://www.covergirl.com"
+		};		
+		
+		var params= {};
+           
+        var attributes = {};               
+		
+		swfobject.embedSWF("../swf/Olympics_splash.swf", "Flash", "1102px", "743px", "8", flashvars, params, attributes);*/
+		
+		
+		swfobject.registerObject("myFlashContent", "8.0.0");
+		
+		
+		$(function() {
+			var COOKIE_NAME = 'splash-page-cookie';
+			$go = $.cookie(COOKIE_NAME);
+			if ($go == null) {
+				$.cookie(COOKIE_NAME, 'test', { path: '/', expires: 6 });								
+				$('#Flash').show();
+			}
+			else {				
+				$('#Flash').hide();
+			}
+			
+			
+			//set up overlay
+			$('#dialog').jqm();
+		});
+		
+		function JSCloseFlash() {
+			$('#Flash').hide();
+		};
+  </script>  
+  
+  <!-- end scripts-->
+
+	
+  <!-- Change UA-XXXXX-X to be your site's ID 
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>-->
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

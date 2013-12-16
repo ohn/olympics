@@ -1,0 +1,29 @@
+/* SatelliteRegular */
+@font-face{ /* for IE */
+font-family: 'SatelliteRegular';
+src:url('type/satellite-webfont.eot');
+}
+@font-face { /* for non-IE */
+font-family: 'SatelliteRegular';
+src:url(http://:/) format("No-IE-404"),url('type/satellite-webfont.ttf') format("truetype");
+}
+
+/* HelveticaNeueLTStdBold */
+@font-face{ /* for IE */
+font-family: 'HelveticaNeueLTStdBold';
+src:url('type/helveticaneueltstd-bd-webfont.eot');
+}
+@font-face { /* for non-IE */
+font-family: 'HelveticaNeueLTStdBold';
+src:url(http://:/) format("No-IE-404"),url('type/helveticaneueltstd-bd-webfont.ttf') format("truetype");
+}
+
+/* HelveticaNeueLTStdRegular */
+@font-face{ /* for IE */
+font-family: 'HelveticaNeueLTStdRegular';
+src:url('type/helveticaneueltstd-roman-webfont.eot');
+}
+@font-face { /* for non-IE */
+font-family: 'HelveticaNeueLTStdRegular';
+src:url(http://:/) format("No-IE-404"),url('type/helveticaneueltstd-roman-webfont.ttf') format("truetype");
+}

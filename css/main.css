@@ -1,0 +1,1441 @@
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; background: #000;height:100%; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; text-decoration: none; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: none; noFocusLine: expression(this.onFocus=this.blur());}
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin:0 ; padding:0; list-style: none;}
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
+ */
+
+table button, table input { *overflow: auto; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* 
+ * Remove inner padding and border in FF3/4: h5bp.com/l 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* 
+ * 1. Remove default vertical scrollbar in IE6/7/8/9 
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== primary styles =====================================================
+   Author: Ohn	
+   ========================================================================== */
+/* General ***/
+.clear {clear: both; font-size; 1px; height: 0; overflow: hidden}
+
+/* Structure ***/
+/* page container */
+#wrapper {
+		width: 100%; 
+		margin: 0 auto;
+		position: relative;
+		height:100%;
+	}
+	#container {
+		position: relative;
+		width: 1024px; 
+		background: #000;
+		margin: 0 auto;
+		}
+	#logo {
+		width: 944px;height: 342px;
+		background: transparent url(../img/layout/cg-logo.png) no-repeat 0 0;	
+		position: relative; top: -93px; left:-356px;
+		z-index: 2998;
+		display: none; 
+		margin: 0; padding: 0;
+		}
+		#logo a {
+			display: block;
+			height: 130px;
+			left: 398px;
+			position: absolute;
+			text-indent: -9999px;
+			top: 200px;
+			width: 144px;
+			}
+	#preloader {
+		width: 1944px;height: 972px;margin: 0 auto 0 -365px;top: -93px;
+		position: absolute;z-index: 2999;
+		background-color:#000;
+		}
+	#preloader .pre-logo {
+	    padding-left:365px;
+		}
+	#loadingtext {}
+	#loadinggif {width: 365px; height: 100px; margin: 0 auto;color: #fff;}
+
+/* top */
+	#top #left_nav {
+		width: 130px; height: 460px;
+		background: transparent url(../img/layout/left-nav.png) no-repeat 0 0;
+		position: absolute; top: 165px; left: 52px; z-index: 2997;
+		}	 
+	#top #left_nav ul {
+		margin: 125px 0 0 0; padding: 0;
+		list-style: none;
+		text-align: center;
+		}
+	#top #left_nav ul li {
+		margin: 0 0 10px 0;
+		}
+	#top #left_nav a, #top #left_nav a:visited, body.touch #top #left_nav a:hover {
+		font-family: 'HelveticaNeueLTStdBold'; font-size: 12px; 
+		color: #000; 
+		text-transform: uppercase; 	
+		display: block; width: 118px;
+		margin: 0 0 0 6px; padding: 3px 0; 
+		background: none;
+		}	
+	#top #left_nav a.active, body.touch #top #left_nav a.active, #top #left_nav a:hover {
+		background: #000000; color: #ffffff;
+		}
+	#top #top_nav {
+		position: absolute; top: 36px; right: 5%; z-index: 2998;
+		}
+	#top #top_nav  ul {
+		margin: 0; padding: 0;
+		list-style: none;
+		}	
+	#top #top_nav  ul  li {
+		display: inline;
+		}
+	#top #top_nav  ul  li.divider {
+		color:#FFF;
+		padding:0 10px;
+		font-size: 24px;
+		font-weight: bold;
+		}
+	#top #top_nav  ul  li.last {
+		margin-right: 0;
+		}
+	#top #top_nav  ul  li a, #top #top_nav  ul  li a:visited,body.touch #top #top_nav  ul  li a:hover {
+		font-family: 'HelveticaNeueLTStdBold'; font-size: 20px; color: #868685; 
+		text-transform: uppercase; 		
+		text-shadow: 2px 2px 2px #000;
+		}
+	#top #top_nav  ul  li a.active, body.touch #top #top_nav  ul  li a.active, #top #top_nav  ul  li a:hover {
+		color: #ff196f;
+		}
+	
+/* bottom */
+#bottom {
+	position: absolute; top:85%; z-index: 2998; 
+	left: 0; display: none;
+	}		
+	#bottom #twitter {
+		background: transparent url(../img/layout/twitter-bg.png) no-repeat 0 0;
+		height: 35px; width: 831px;
+		margin: 0 auto; padding: 13px 0 0 165px;
+		color: #000; font-style: italic; font-size: 14px;
+	}	
+		#bottom #twitter a, #bottom #twitter a:visited {
+			color: #000; font-weight: bold;
+		}
+		#bottom #twitter a:hover {
+			text-decoration: underline;
+		}
+	#bottom #footer ul {
+	  list-style: none outside none;
+	  margin: -10px 0 0 164px;
+	  padding: 0;
+	}		
+	#bottom #footer  ul li {
+		display: block; float: left;
+		margin: 0; padding: 0;			
+	}
+	#bottom #footer  ul li.last a{
+		padding-right: 0;
+		border-right: none;
+	}
+	#bottom #footer  ul li a, #bottom #footer  ul li a:visited {
+		text-transform: uppercase;
+		font-size: 8px; color: #808080;	
+		margin: 0;
+		padding: 0 5px;
+		border-right: 1px solid #808080;
+		}		
+	#bottom #footer  ul li a, #bottom #footer  ul li a:visited {
+		color: #808080;
+		}
+	#bottom #footer  ul li.facebook a, #bottom #footer  ul li.twitter a, #bottom #footer  ul li.youtube a {
+		display: block; text-indent: -9999px;
+		}	
+	#bottom #footer  ul li.facebook a {
+		width: 42px; height: 10px;  
+		background: transparent url(../img/layout/facebook.png) no-repeat 0 0;	
+		margin: 4px 0 0 5px; padding-right: 0;
+		}
+	#bottom #footer  ul li.twitter a { 
+		width: 38px; height: 10px;
+		background: transparent url(../img/layout/twitter.png) no-repeat 0 0;	
+		margin: 5px 0 0 5px; padding-right: 0;
+		}
+	#bottom #footer  ul li.youtube a { 
+		width: 33px; height: 13px;
+		background: transparent url(../img/layout/youtube.png) no-repeat 0 0;	
+		margin: 3px 0 0 5px;
+		}
+		#bottom #footer .language {
+			float: right;
+			}	
+			#bottom #footer .language, #bottom #footer .language a {
+				text-transform: uppercase; font-weight: bold; color: #808080;
+				font-size: 10px;
+				}
+				#bottom #footer .language a:hover, #bottom #footer .language .active {
+					color: #ffffff;
+					}
+				#bottom #footer .language .divider {			
+					color: #FF196F	
+				}	
+		
+/* home */
+.home #background-image-1 {
+	background: transparent url(../img/home/home_bg1.jpg) no-repeat top right;	
+	width: 1010px; height: 972px;
+	position: absolute; top: 0;
+	z-index: 2990;
+	display: none;
+	}
+.home #background-image-2 {
+	background: transparent url(../img/home/home_bg2.jpg) no-repeat top right;	
+	width: 1010px; height: 972px;
+	position: absolute; top: 0;
+	z-index: 2991;
+	display: none;
+	}
+.home #background-image-3 {
+	background: transparent  url(../img/home/home_bg3.jpg) no-repeat top right;	
+	width: 1010px; height: 972px;
+	position: absolute; top: 0;
+	z-index: 2992;
+	display: none;
+	}	
+	.home .home-caption {		
+		font-weight: bold; font-size: 12px; color: #ffffff;
+		position: absolute; top: 480px; left: 102px; z-index: 2998;
+		display: none;
+		}
+	.home #call-outs {		
+		position: absolute;	top: 520px; left: 102px;
+		z-index: 2998;
+		width: 816px; height: 122px;
+		display: none;
+		}
+	.home .call-out {
+		width: 260px; height: 122px; float: left;	
+		margin: 0 18px 0 0;
+		}
+		.home .call-out p {
+			padding: 0; margin: 0;
+			}
+	.home .call-out.last {
+		margin-right: 0;
+		}
+	.home .call-out h2 {
+		text-indent: -9999px;
+		}
+	.home .call-out a {
+		display: block; width: 260px; height: 122px;
+		text-indent: -9999px;
+		}		
+	.home #marlen {
+		background: transparent url(../img/home/marlen-tout.jpg) no-repeat top center;
+		}
+	.home #jen {
+		background: transparent url(../img/home/jen-tout.jpg) no-repeat top center;
+		}
+	.home #mary {
+		background: transparent url(../img/home/mary-tout.jpg) no-repeat top center;
+		}	
+		
+/* Sections ***/
+#content, .section{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#content{ /* view port */
+	float:left; overflow:hidden;
+	width:100%; height:803px;		
+    position: absolute; left: 0; top: 0; /*z-index:2996;	*/
+}
+
+.section{
+	width:3072px;
+	position:relative;	
+}
+
+	.section .sub{
+		position:relative;
+		float:left;
+		padding:0;
+		width:1024px;
+		height:803px;	
+	}
+		.section .sub p{
+			width:550px;
+			/*margin:16px 0;*/
+			font-size:80%;
+			line-height:1.4em;
+		}
+		.section .next, .section .prev{
+			font-size:18px;
+			position:absolute;
+			bottom:15px;
+			letter-spacing:-2px;
+		}
+		.section .next{
+			right:30px;
+		}
+		.section .prev{
+			left:30px;
+		}
+		.section h2 {
+			display: none;
+		}
+		.section div.detail 
+		{
+			position:relative;			
+			color: #FFF;
+			float:right;
+			top:80px;
+			padding: 30px;
+			display: block;
+			font-size: 115%;
+			font-family: Arial,sans-serif;
+			width:450px;
+			/*z-index:11;*/
+			z-index: 2999;
+			margin-right:25px;
+		}
+		.section div.detail h2 {
+			display: block; margin: 0 0 20px 0;
+		}
+		.section div.detail h2 span {
+			display: block;
+			width: 100%;
+		}		
+		.section div.detail h2 .regular {
+			font-family: 'HelveticaNeueLTStdBold'; font-size: 16px;
+			text-transform: uppercase; color: #ffffff;
+			line-height: 1;
+		}
+		.section div.detail h2 .satellite-pink {
+			font-family: 'SatelliteRegular'; font-size: 48px;
+			text-transform: uppercase; color: #ff196f;
+			line-height: 1; 
+		}
+		.section div.detail h2 .satellite-white {
+			font-family: 'SatelliteRegular'; font-size: 48px;
+			text-transform: uppercase; color: #ffffff;
+		}	
+		.section div.detail h3 {
+			text-transform: uppercase; font-size: 13px;
+			margin: 0 0 5px 0;
+		}
+		.section div.detail p, .section div.detail h2 {
+			width: 100%;
+			position:relative;
+			z-index:1;
+		}		
+		.section div.detail .flags {
+			font-weight: bold; 		
+			background: transparent url(../img/layout/flags.gif) no-repeat 0 0;
+			height: 17px;
+			padding: 0 0 0 35px;
+			margin: -7px 0 7px 0;
+		}
+		.section div.detail .us-flag {
+			background-position: 0 0;
+		}
+		.section div.detail .canada-flag {
+			background-position: 0 -17px;
+		}
+		.section div.detail div.bg 
+		{
+			position:absolute;
+			z-index:0;
+			top:0;left:0;
+			height:100%;
+			width:100%;
+			background-color: #000;
+			opacity: .7;
+			filter:alpha(opacity=70);
+		}		
+		.section div.detail ul {
+			margin: 0; padding: 0;
+			list-style-type:disc;
+		}
+		.section div.detail ul  li{
+			color: #fff; font-size: 11px;
+			padding: 0 0 5px 0;
+		}
+		.section div.detail div.note  {
+			margin: 20px 0 0 0;
+			float: right;
+		}
+		.section div.detail .nav {font-family: 'SatelliteRegular'; ext-transform: uppercase; color: #ffffff; font-size: 30px;}
+		.section div.detail .nav  a, .section div.detail .nav  a:visited {
+			font-family: 'HelveticaNeueLTStdRegular'; color: #ff196f; font-size: 50px
+			}		 
+		.section div.story div.banner 
+		{
+			position:absolute;
+			z-index:0;
+			bottom:200px; right:70px;
+			height:73px;
+			width:284px;
+			background: transparent url(../img/layout/banner.png) no-repeat 0 0;			
+		}
+		.section .note {			
+			text-align: right;
+		}
+		.section .note a, .section .note a:visited {
+			font: 85% normal;
+			font-family: Arial,sans-serif;
+		}		
+		a.download  {
+			color: #ff196f;
+			text-transform: uppercase; 
+			font-size: 12px;
+			font-weight: bold;
+			font-family: Arial,sans-serif;
+		}
+		a.share
+		{
+			background:url(../img/layout/arrow.png) right 4px no-repeat;
+			margin-right:10px;
+			padding-right:13px;
+			display:inline-block;
+			color:#fff;				
+			position:relative;
+			z-index:1;
+		}
+		a.share span {
+			font-style: italic;
+			}
+		a.share img {
+			margin-top: -2px;
+		}
+		.sharethisbutton {
+			border: 0; background:url(../img/layout/arrow.png) right 4px no-repeat;
+			margin-right:10px;
+			padding:0 13px 0 0;
+			color:#fff;
+		}
+	
+	
+
+	
+	
+	/**********  Story Section  ***********/	
+	.section div.detail.story 
+	{
+		height:350px;
+		width:41%;
+		padding:2%;
+		margin-right:5%;
+		top: 110px;
+	}	
+	.section div.detail.story div.bg {
+		min-height: 390px;
+	}
+	
+	/**********  QA Section  ***********/	
+	.section div.detail.qa
+	{		
+		background:url(../img/layout/qa-bg.png) right;		
+		top: 329px;
+		width: 616px; height: 217px;
+	}
+	.section div.detail.qa h2
+	{
+		margin: 0 0 10px 0;
+	}
+	.section div.detail.qa p
+	{
+		margin-top: 0;
+	}
+	.section div.detail.qa div.left, .section div.detail.qa div.right
+	{		
+		float:left;
+	}
+	.section div.detail.qa div.left
+	{
+		width:248px;
+		border-right:1px solid #8c8a8b;
+	}
+	.section div.detail.qa div.left p {width: 228px;}
+
+	.section div.detail.qa div.right
+	{
+		width:345px;
+		overflow:auto;
+		margin: 0 0 0 20px;
+	}
+	
+	/**********  Watch Section  ***********/	
+	.section div.detail.watch 
+	{
+		height:480px;
+		width:56%;		
+		padding:  2% 5%;
+		margin: 0 5% 0 0;
+		
+	}		
+	.section div.detail.watch h2 {
+		margin: 0 0 5px 0;
+		width: 200px; float: left;
+	}	
+	.section div.detail.watch .tab-nav {
+		width: 100px; float: right;
+		position: relative; z-index: 1;
+		margin: 45px 0 10px 0;
+	}
+	.section div.detail.watch .tab-container {
+		position: relative; z-index: 1;
+	}
+	.section div.detail.watch .tab-nav a, .section div.detail.watch .tab-nav a:visited {
+		font-family: 'HelveticaNeueLTStdRegular'; font-size: 14px; color: #666666;		
+	}
+	.section div.detail.watch .tab-nav a:hover, .section div.detail.watch .tab-nav a.active {
+		color: #FF196F;
+	}
+	.section div.detail.watch .tab-nav .divider {
+		font-size: 13px; margin: 0 10px;
+	}		
+	.section div.detail.watch #videos, .section div.detail.watch #photos
+	{
+		display:none;
+		position:relative;
+		z-index:1;	
+	}
+	.section div.detail.watch section {
+		width: 100%; height: 100%
+	}
+	.section div.detail.watch iframe
+	{
+		width:100%; height:100%;
+		max-height: 311px;		
+		margin:0; border: none;
+	}
+	.section div.detail.watch .gallery, .section div.detail.watch .video-player, .section div.detail.watch .video-slider {
+		width: 571px; height: 311px;
+		border:1px solid #4e5252;
+		overflow: hidden;
+	}
+	.section div.detail.watch #photos  .caption {
+		font-size: 12px; text-transform: uppercase;
+		position: absolute; top: 92%; right: 10px; z-index: 2998;
+		width:100px; text-align: right;		
+	}
+	.section div.detail.watch  .nav a
+	{
+		font-size: 1em; line-height: 1em; color: #eaeaea;
+		background: #5e5e5e; 	
+		padding: 0 7px 5px 7px;		
+		position: absolute; top: 107%; z-index: 2999;
+	}
+	.section div.detail.watch  .prev-control {
+		left: -17px;
+	}
+	.section div.detail.watch  .next-control {
+		right: -17px;
+	}
+	.section div.detail.watch  .nav a:hover {
+		color: #FF196F;
+	}	
+	.section div.detail.watch .thumb-nav-container { position: absolute !important; top: 328px; left: 0; z-index: 2999; width: 100%}	
+	.section div.detail.watch .thumb-nav li { width: 107px; float: left; margin-right: 9px; list-style: none; position: relative; padding: 0 }
+	.section div.detail.watch .thumb-nav li:last-child {margin-right: 0}
+	.section div.detail.watch .thumb-nav a { width: 107px; display: block;}	
+	.section div.detail.watch .thumb-nav a:focus { outline: none; }
+	.section div.detail.watch .thumb-nav img { border: none; display: block }
+	.section div.detail.watch .thumb-nav .overlay {cursor: pointer; position: absolute; top: 0; bottom: 0; background: #ffffff; width: 100%; height: 100%; opacity: .4; filter:alpha(opacity=40); }
+	.section div.detail.watch .thumb-nav li.activeSlide .overlay {opacity: 0; filter:alpha(opacity=0);}	
+	.section div.detail.watch .note {
+		position: absolute; right: 5%; bottom: -8%;
+		}	
+	
+	/**********  Look Section  ***********/	
+	.section div.detail.look 
+	{
+		height:200px;
+		/*width:333px;*/
+		width: 34.5%;
+		padding: 0;
+		margin: 0;
+		top: 390px;
+	}
+	.section div.detail.look ul {
+		margin-left: 15px;
+	}
+	.section div.detail.look div.bg  {
+		background: none;
+	}
+	.section div.detail.look .note {
+		text-align: left;
+	}
+	.section div.detail.look .modal-callout a {
+		display: block; height: 320px; width: 385px;
+		position: absolute; right: 0; top: -330px;
+		text-indent: -9999px;
+		z-index: 2999;
+	}
+	#look-modal {
+		width: 508px; height: 395px;
+		background: transparent url(../img/layout/popup-bg.jpg) no-repeat 0 0;
+		padding: 0;
+	}
+	#look-modal .jqmClose {
+		text-transform: uppercase;
+		font-size: 9px; font-weight: bold;
+		float: right;
+		color: #000000;
+		margin: 11px 14px 0 0;
+	}
+	#look-modal .jqmClose:hover {
+		text-decoration: underline;
+	}
+	#look-modal .copy {
+		position: absolute; top: 60px; right: 35px;
+		width: 157px; height: 180px;
+	}
+	#look-modal p {
+		font-size: 11px; line-height: 16px; margin: 0;
+	}
+	#look-modal h2 {
+		color: #FF196F; font-size: 19px; line-height: 25px;
+		margin: 0 0 5px;		
+	}
+	#mary_look .info h2 {margin-bottom: 5px;}
+	
+	/**********  Sport Section  ***********/	
+	.section div.detail.sport 
+	{
+		height:492px;
+		/*width:333px;*/
+		width: 33.5%;
+		padding: 0;
+		margin: 0 2% 0 0;
+		top: 120px;
+	}
+	.section div.detail.sport div.bg {
+		display: none;
+	}
+	.section div.detail.sport h2 span {
+		display: inline;
+	}	
+	.section div.detail.sport .note {text-align: left}
+	
+	/**********  Workout Section  ***********/	
+	.section div.detail.workout
+	{
+		height:546px;
+		width:60%;
+		margin-right: 5%;
+		top: 83px;
+	}
+		.section div.detail.workout h2 {
+			margin: 0; padding: 0;
+			}
+		.section div.detail.workout .tagline {
+			padding: 0; margin: 0 0 10px 0;
+			}
+		.section div.detail.workout .download-link{
+			background: #000000;
+			margin: 0;
+			padding: 5px;
+			width: 607px;	
+			}
+			.section div.detail.workout .download-link img{
+				margin-top: -7px;
+				}
+		.section div.detail.workout .note {
+			text-align: left;
+			width: 607px;
+			margin: 5px 0 10px;
+			}
+	.workout-gallery {
+		position: relative; 
+		height: 360px; width: 607px;
+		}
+		.workout-gallery .prev-control, .workout-gallery .next-control {
+			position: absolute; top: 49%; z-index: 3000;
+			display: block; background: #535353; color: #ffffff;
+			font-size: 35px; 
+			width: 23px; height: 28px; line-height: 28px;
+			}		
+		.workout-gallery .prev-control {
+			left: 0;
+			padding: 0 5px 0 0;
+			}
+		.workout-gallery .next-control {
+			right: 0;
+			padding: 0 0 0 5px;
+			}
+		.workout-gallery  a:hover {
+			color: #FF196F;
+			}
+		.workout-gallery .gallery-nav {
+			position: absolute; right: 10px; top: 10px;
+			z-index: 3000; margin: 0; padding: 0;
+			}
+			.workout-gallery .gallery-nav li {
+				display: block; float: left;
+				padding: 0; margin: 0 0 0 5px;
+				}
+				.workout-gallery .gallery-nav li a, .workout-gallery .gallery-nav li a:hover {
+					display: block; width: 10px; height: 9px; 
+					text-indent: -9999px;
+					background-image: url(../img/layout/icon-circle.gif); background-repeat: no-repeat;
+					}
+				.workout-gallery .gallery-nav li a {
+					background-position: 0 0;
+					}	
+				.workout-gallery .gallery-nav li.activeSlide a, .workout-gallery .gallery-nav li a:hover {
+					background-position: 0 -9px;
+					}				
+		.workout-gallery .gallery { 
+			height: 360px; width: 607px; 
+			padding:0; margin:0; overflow: hidden; clear:left; 
+			background: #ffffff; color: #000000;
+			z-index: 2999;
+			}
+		.workout-gallery .slide { 
+			height: 360px; width: 607px; 
+			padding: 0; top:0; left:0 
+			}
+			.workout-gallery .slide  .image{ 
+				width: 68%; float: left;
+				}
+			.workout-gallery .slide  .copy{ 
+				float: left;
+				margin: 40px 40px 0 0;
+				padding: 0 0 20px 0;
+				width: 25%;
+				font-size: 14px;
+				}
+	/**********  Recipe Section  ***********/	
+	.section div.detail.recipe 
+	{
+		height:492px;
+		/*width:333px;*/
+		width: 30.5%;
+		padding: 0;
+		margin: 0 5% 0 0;
+		top: 83px;
+	}
+
+	/* background images */
+	.section .sub 
+	{
+		background-color:#000;
+		background-position:-9999px 0;
+		background-repeat:no-repeat;
+		background-image: url(../img/layout/default_bg.jpg);
+	}
+	/* marlen */
+	#marlen_story {
+		background-image: url(../img/marlen/marlen_bio_bg.jpg);
+	}
+	#marlen_look {
+		background-image: url(../img/marlen/marlen_look_bg.jpg);
+	}
+	#marlen_workout {
+		background-image: url(../img/marlen/marlen_workout_bg.jpg);
+	}
+	#marlen_recipe {
+		background-image: url(../img/marlen/marlen_recipe_bg.jpg);
+	}
+	#marlen_sport {
+		background-image: url(../img/marlen/marlen_sport_bg.jpg);
+	}
+	#marlen_watch {
+		background-image: url(../img/marlen/marlen_watch_bg.jpg);
+	}
+	#marlen_qa {
+		background-image: url(../img/marlen/marlen_qa_bg.jpg);
+	}
+
+	/* jennifer */
+	#jennifer_story {
+		background-image: url(../img/jennifer/jen_bio_bg.jpg);
+	}
+	#jennifer_look {
+		background-image: url(../img/jennifer/jen_look_bg.jpg);
+	}
+	#jennifer_workout {
+		background-image: url(../img/jennifer/jen_workout_bg.jpg);
+	}
+	#jennifer_recipe {
+		background-image: url(../img/jennifer/jen_recipe_bg.jpg);
+	}
+	#jennifer_sport {
+		background-image: url(../img/jennifer/jen_sport_bg.jpg);
+	}
+	#jennifer_watch {
+		background-image: url(../img/jennifer/jen_watch_bg.jpg);
+	}
+	#jennifer_qa {
+		background-image: url(../img/jennifer/jen_qa_bg.jpg);
+	}
+
+	/* mary */		
+	#mary_story {
+		background-image: url(../img/mary/mary_bio_bg.jpg);
+	}		
+	#mary_look {
+		background-image: url(../img/mary/mary_look_bg.jpg);
+	}
+	#mary_workout {
+		background-image: url(../img/mary/mary_workout_bg.jpg);
+	}
+	#mary_recipe {
+		background-image: url(../img/mary/mary_recipe_bg.jpg);
+	}
+	#mary_sport {
+		background-image: url(../img/mary/mary_sport_bg.jpg);
+	}
+	#mary_watch {
+		background-image: url(../img/mary/mary_watch_bg.jpg);
+	}
+	#mary_qa {
+		background-image: url(../img/mary/mary_qa_bg.jpg);
+	}
+
+	/* for flexcroll - define styles for each content here */
+	.section div.detail .flexcroll {
+		width: 100%;	
+		overflow: auto;
+		position: relative;	
+		}
+	.section div.detail .bio-detail {	
+		height: 200px;
+		}	
+	.section div.detail .sport-detail {	
+		height: 320px;		
+		}		
+		#jennifer-sport-detail {
+			height: 275px;
+		}
+	.section div.detail .flexcroll p {
+		width: 90%;
+		margin: 0 0 20px 0;
+		}	
+
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+ div.swipe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;}
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 1025px) {
+	/* Style adjustments for viewports 1010px and over go here - Large Screens */
+	#wrapper 
+	{
+		margin: 0 auto;
+	}
+	#container 
+	{
+		margin: 0 auto;
+	}
+	#content {z-index:2996;}
+}
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+ /* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#wrapper 
+	{
+		margin: 0 auto;
+	}
+	#container {
+		margin: 0;
+	}
+} 
+
+ /* iPad [landscape] */
+@media only screen and (orientation : landscape) and (max-width: 1024px) 
+{	
+	.section div.story div.banner  {
+		bottom: 205px;
+	}
+	
+	.home #call-outs {		
+		top: 450px; 
+	}
+	.home .home-caption {				
+		top: 410px;
+	}
+	.section div.detail.watch 
+	{
+		height: 435px;
+	}
+	.section div.detail.story {
+		top: 100px;		
+	}	
+	.section div.story div.banner {		
+		bottom: 220px;
+	}
+	#content {z-index:2996;}
+	
+	.section div.detail.workout {		
+		top: 63px;
+		}
+	
+	.section div.detail.workout .download-link {
+		width: 707px;
+		}
+	.workout-gallery {		
+		height: 360px; width: 650px;		
+		}	
+		.workout-gallery .gallery { 
+			height: 360px; width: 650px;		
+			}
+		.workout-gallery .slide { 
+			height: 360px; width: 650px !important; /*need important to overwrite jquery cycle width for the slide*/
+			}
+			.workout-gallery .slide  .image, .workout-gallery .slide  .image img{ 
+				width: 406px;
+				}
+			.workout-gallery .slide  .copy{ 				
+				margin: 40px 40px 0 10px; padding: 0 0 10px 0;
+				width: 190px;				
+				}	
+	
+}
+ /* iPad [portrait] */
+@media only screen and (orientation : portrait) and (max-width: 768px) 
+{		
+	#container {
+		position: relative;
+		width: 768px; 
+		background: #000;
+		margin: 0;
+		padding:0;
+		height:900px;
+	}
+	#bottom {
+		top: 90% !important;
+	}
+	#bottom #twitter {
+		width: 500px; 	
+	}	
+	#bottom #twitter { 
+		background-position:0 -57px;	
+		padding-left: 200px;
+	}
+	.section{
+		width:2304px;	
+	}
+	.section .sub{
+		width:768px;		
+	}
+	
+	.home #background-image-1 {
+	background: transparent url(../img/home/home_bg1_vertical.jpg) no-repeat top right;	
+	width: 100%;
+	margin:auto; left:0;
+	}
+	.home #background-image-2 {
+		background: transparent url(../img/home/home_bg2_vertical.jpg) no-repeat top right;	
+		width: 100%;
+		margin:auto; left:0;
+	}
+	.home #background-image-3 {
+		background: transparent  url(../img/home/home_bg3_vertical.jpg) no-repeat top right;	
+		width: 100%;
+		margin:auto; left:0;
+	}	
+	.home .home-caption {				
+		left: 15px; top: 630px;
+	}
+	.home #call-outs 	
+	{
+		position: absolute;	
+		top: 520px;
+		z-index: 2998;
+		width: 96%; 
+		height: 122px;
+		margin:150px 2%;
+		left: 0;		
+	}	
+	.home .call-out {
+		width: 33%; 
+		height: 122px; float: left;	
+		margin: 0 0.5% 0 0;
+	}
+	
+	#logo,#top #left_nav
+	{
+		margin-left:-20px;
+	}
+	.section div.detail {
+		top: 235px;
+	}
+	.home #call-outs
+	{
+		/*-webkit-transform: scale(.95);*/
+	}
+
+	/* background images */
+	/* marlen */
+	#marlen_story {
+		background-image: url(../img/marlen/marlen_bio_bg_vertical.jpg);
+	}
+	#marlen_look {
+		background-image: url(../img/marlen/marlen_look_bg_vertical.jpg);
+	}
+	#marlen_workout {
+		background-position:-82px 0;
+	}
+	#marlen_recipe {
+		background-image: url(../img/marlen/marlen_recipe_bg_vertical.jpg);
+	}
+	#marlen_sport {
+		background-image: url(../img/marlen/marlen_sport_bg_vertical.jpg);
+	}
+	#marlen_watch {
+		background-position:-122px 0;
+	}
+	#marlen_qa {
+		background-position:-172px 0;
+	}
+
+	/* jennifer */
+	#jennifer_story {
+		background-image: url(../img/jennifer/jen_bio_bg_vertical.jpg);
+	}
+	#jennifer_look {
+		background-image: url(../img/jennifer/jen_look_bg_vertical.jpg);
+	}
+	#jennifer_workout {
+		background-position:-82px 0;
+	}
+	#jennifer_recipe {
+		background-image: url(../img/jennifer/jen_recipe_bg_vertical.jpg);
+	}
+	#jennifer_sport {
+		background-image: url(../img/jennifer/jen_sport_bg_vertical.jpg);
+	}
+	#jennifer_watch {
+		background-position:-122px 0;
+	}
+	#jennifer_qa {
+		background-position:-109px 0;
+	}
+
+	/* mary */		
+	#mary_story {
+		background-image: url(../img/mary/mary_bio_bg_vertical.jpg);
+	}		
+	#mary_look {
+		background-image: url(../img/mary/mary_look_bg_vertical.jpg);
+	}
+	#mary_workout {
+		background-position:-162px 0;
+	}
+	#mary_recipe {
+		background-image: url(../img/mary/mary_recipe_bg_vertical.jpg);
+	}
+	#mary_sport {
+		background-image: url(../img/mary/mary_sport_bg_vertical.jpg);
+	}
+	#mary_watch {
+		background-position:-122px 0;
+	}
+	#mary_qa {
+		background-position:-142px 0;
+	}
+
+	#jen_qa_detail, #marlen_qa_detail, #mary_qa_detail {
+		width: 270px;	
+	}
+	#jen_qa_detail p, #marlen_qa_detail p, #mary_qa_detail p {width: 260px;}
+
+	
+	/**********  Story Section  ***********/	
+	.section div.detail.story 
+	{
+		/*height:400px;
+		width:372px;
+		margin-right:19px;
+		top: 100px;*/
+	}
+	
+	
+	/**********  QA Section  ***********/	
+	.section div.detail.qa 
+	{
+		height:205px;
+		width:525px;
+		background:url(../img/layout/qa-bg.png) right;
+		margin-right:10px;
+		top: 395px;
+	}
+	.section div.detail.qa div.left
+	{
+		width:218px;
+		border-right:1px solid #fff;
+	}
+
+	.section div.detail.qa div.right
+	{
+		width:245px;
+		overflow:auto;
+	}
+	
+	/**********  Watch Section  ***********/	
+	.section div.detail.watch {
+		top: 129px; width: 65%;	margin-right: 2%;	
+	}
+	.section div.detail.watch #videos
+	{		
+		height: 270px;
+	}	
+	.section div.detail.watch iframe, .section div.detail.watch .video-slider
+	{
+		max-height:270px;
+		width:100%;
+	}	
+	.section div.detail.watch .video-player, .section div.detail.watch .gallery {
+		width: 495px; height: 270px;
+	}
+	.section div.detail.watch .thumb-nav-container { 
+		top: 283px; left: 21px;
+	}
+	.section div.detail.watch .thumb-nav{
+		left: 23px;
+		height: 45px; overflow: hidden;
+	}
+	.section div.detail.watch .prev-control {
+		left: 0px; top: 80%;
+	}
+	.section div.detail.watch .next-control {
+		right: 0px; top: 80%;
+	}		
+	
+	/**********  Look Section  ***********/	
+	.section div.detail.look 
+	{
+		height:250px;
+		width: 41%;
+		top: 390px;		
+	}
+	.section div.detail.look .modal-callout a {
+		top: -300px;
+		width: 350px;
+	}
+	/**********  Sport Section  ***********/	
+	.section div.detail.sport 
+	{
+		height:492px;
+		/*width:303px;
+		margin-right:27px;*/
+		width: 41%;
+		top: 177px;
+		padding-right:3%;
+	}
+	
+	/**********  Workout Section  ***********/	
+	.section div.detail.workout {
+		height:300px;
+		width:65%;
+		margin-right:3%;
+		top: 83px;
+		}
+	.section div.detail.workout .download-link {
+		width: 532px;
+		}
+	.workout-gallery {
+		position: relative; 
+		height: 300px; width: 542px;
+		}	
+		.workout-gallery .gallery { 
+			height: 300px; width: 542px; 			
+			}
+		.workout-gallery .slide { 
+			height: 300px; width: 542px; 
+			}
+			.workout-gallery .slide  .image{ 
+				width: 284px; 
+				}
+			.workout-gallery .slide  .image img{ 
+				width: 284px; margin: 48px 0 0 0;
+				}	
+			.workout-gallery .slide  .copy{ 				
+				margin: 40px 40px 0 10px; padding: 0 0 10px 0;
+				width: 200px;
+				}	
+	
+	/**********  Recipe Section  ***********/	
+	.section div.detail.recipe 
+	{
+		height:492px;
+		/*width:303px;
+		margin-right:27px;*/
+		width: 41%;
+		top: 177px;
+	}
+	
+}
+
+
+
+
+/* ==|== IE styles =======================================================
+   Some IE specific styles
+   ========================================================================== */
+.ie7 a:focus, *:focus {
+    noFocusLine: expression(this.onFocus=this.blur());
+	outline: none;
+}
+.ie7 #top #left_nav a, #top #left_nav a:visited {
+		margin: 0; 		
+	}
+.ie7 .section div.detail.watch #photos  .caption {
+	right: 30px;
+}	
+.ie7 .section div.detail.watch .thumb-nav-container {
+	left: 22px;
+}
+.ie7 .section div.detail.watch .next-control {
+    right: 0px;
+}
+.ie7 .section div.detail.watch .prev-control {
+    left: 0px;
+}
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

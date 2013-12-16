@@ -1,0 +1,56 @@
+/*
+Following is only needed if you are using alpha png images, if not, IE6 can use the same CSS for images.
+The alpha png images for IE6 has to be seperated as filter:alphaimage loader does not support image positioning.
+You can use the same seperated images for more advanced browsers, but to minimize http calls, merging them
+is a good practice so advanced browsers will benefit from this.
+IE7 comes with proper png support, so it is not included in this conditional CSS.
+*/
+
+.vscrollerbarbeg {
+/*top image holder for vertical scroll bar*/
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/vscrollertop.png');
+background-image: none;
+}
+
+.vscrollerbarend {
+/*bottom image holder for vertical scroll bar*/
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/vscrollerbot.png');
+background-image: none;
+}
+
+.hscrollerbarbeg {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/hscrollersin.png');
+background-image: none;
+}
+
+.hscrollerbarend {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/hscrollerdex.png');
+background-image: none;
+}
+
+.vscrollerbasebeg {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/vscrollbasetop.png');
+background-image: none;
+}
+
+.vscrollerbaseend {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/vscrollbasebot.png');
+background-image: none;
+}
+
+.hscrollerbasebeg {
+/*top image holder for vertical scroll bar*/
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/hscrollbasesin.png');
+background-image: none;
+}
+
+.hscrollerbaseend {
+/*top image holder for vertical scroll bar*/
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/web/images/hscrollbasedex.png');
+background-image: none;
+}
+
+/* test2 and test3 boxes does not need filters, no multibit alpha pngs there. */
+#test2, #test2 div, #test3, #test3 div {
+filter: none !important;
+}

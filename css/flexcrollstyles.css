@@ -1,0 +1,109 @@
+/* Scroll Bar Master Styling */
+
+.scrollgeneric
+{
+line-height: 1px;
+font-size: 1px;
+position: absolute;
+}
+
+.vscrollerbase, .vscrollerbar {
+width: 5px;
+top: 0px;
+}
+
+.vscrollerbar {
+left: 0px;
+}
+
+.hscrollerbase, .hscrollerbar {
+height: 15px;
+left: 0px;
+
+}
+
+
+.hscrollerbar {
+top: 0px;
+}
+
+.vscrollerbar, .hscrollerbar {
+/*padding information of these elements are only used for
+padding of the scroll-bar with respect to the scroll base,
+the padding will automatically be turned off by the script*/
+padding: 5px;
+/* z-index for scrollbars no longer has to be given as of version
+1.7.5 for correct operation, but it is still recommended, as this
+decides the z-index for content.*/
+z-index: 2;
+}
+
+.vscrollerbarbeg {
+/*top image holder for vertical scroll bar*/
+background: #f2005a;
+width: 5px;
+height: auto;
+top: 0px;
+cursor: pointer;
+}
+
+.vscrollerbarend {
+/*bottom image holder for vertical scroll bar*/
+/*background: url(http://www.hesido.com/web/images/vscroller.png);
+width: 15px;
+height: 10px;*/
+}
+
+.hscrollerbarbeg {
+/*background: url(http://www.hesido.com/web/images/hscroller.png) -10px 0px;*/
+height: 15px;
+width: auto;
+left: 0;
+}
+
+.hscrollerbarend {
+/*background: url(http://www.hesido.com/web/images/hscroller.png);*/
+height: 15px;
+width: 10px;
+}
+
+/* Following are OPTIONAL */
+
+.vscrollerbase, .hscrollerbase {
+background:transparent url(../img/layout/scrollbar-bg.png) 0 0 repeat-y;
+}
+
+.hscrollerbasebeg {
+left: 0px;
+top: 0px;
+height: 15px;
+/*background: url(http://www.hesido.com/web/images/scrollbases.png) -22px 0px no-repeat;*/
+}
+
+.hscrollerbaseend {
+top: 0px;
+height: 15px;
+width: 7px;
+/*background: url(http://www.hesido.com/web/images/scrollbases.png) 0% 0% no-repeat;*/
+}
+
+/*.vscrollerbasebeg {
+top: 0px;
+width: 15px;
+background: url(http://www.hesido.com/web/images/scrollbases.png) -7px -8px no-repeat;
+}
+
+.vscrollerbaseend {
+height: 7px;
+width: 15px;
+background: url(http://www.hesido.com/web/images/scrollbases.png) -7px 0px no-repeat;
+}*/
+
+.scrollerjogbox {
+width: 15px;
+height: 15px;
+bottom: 0px;
+right: 0px;
+/*background: white url(http://www.hesido.com/web/images/scrolljog.png) 50% 50%;*/
+}
+
